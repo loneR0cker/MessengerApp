@@ -127,15 +127,16 @@ h1, h2, h3, h4, h5, h6{
 }
 
 .vector{
-    font-size: 25px;
-    width: 39px;
-    height: 26px;
+    font-size: 20px;
+    width: 47px;
+    height: 50px;
     
     position: absolute;
-    right: 40px;
-    top: 49px;
-    background-color: transparent;
+    right: 31px;
+    top: 37px;
+    background-color: #fff;
     border: 0;
+    border-radius: 10px;
 }
 
 .svg{

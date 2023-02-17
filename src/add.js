@@ -61,8 +61,9 @@ export function addMessage() {
 function resValue() {
     let messageValue = message.value;
     const messagePlace = messageValue.lastIndexOf(' ', 30);
-    let counter = 0;
+    
     const num = messageValue[1];
+    let counter = 0;
 
     for (let i = 0; i < messageValue.length; i++){    
         if (num === messageValue[i]) {
@@ -71,22 +72,30 @@ function resValue() {
 
         if (counter >= 26) {
             alert('This message doesn`t make any sense');
-            return 'alert: The maximum number of identical letters is 25'
+            return 'alert: The maximum number of identical letters is 30'
         }
     }
 
-    if (messageValue.length >= 30) {
+    if (/[а-яА-ЯЁё-і]/g.test(messageValue) && messageValue.length >= 30) {
         const messageMax = messageValue.replace(messagePlace, '<br>');
 
-        if (messagePlace == -1 && messageValue.length > 35) {
-            const messageMax = messageValue.replace(messageValue.slice(33, 35), '<br>'); //Eng 34 - 33, 36;  Ru 29 - 27, 30;
+        if (messagePlace == -1 && messageValue.length > 29) {
+            const messageMax = messageValue.replace(messageValue.slice(27, 30), '<br>'); //Eng 34 - 33, 36;  Ru 29 - 27, 30;
+            
+            return messageMax 
+        } else {
+            return messageValue
+        }
 
-            return messageMax; 
-        };
-
-        return messageMax;
     } else {
-        return messageValue;
+
+        if (messagePlace == -1 && messageValue.length > 34) {
+            const messageMax = messageValue.replace(messageValue.slice(33, 35), '<br>');
+
+            return messageMax;
+        } else {
+            return messageValue
+        }
     }
 }
 

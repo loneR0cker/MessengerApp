@@ -6,7 +6,7 @@ form.addEventListener('submit', formSend);
     
 async function formSend(e) {
     e.preventDefault();
-        
+       
     let error = formCheck(form);
         
     if (error === 0) {

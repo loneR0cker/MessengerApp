@@ -60,30 +60,34 @@ export function addMessage() {
 //Message text check
 function resValue() {
     let messageValue = message.value;
-    const messagePlace = messageValue.lastIndexOf(' ', 35);
+    const messagePlace = messageValue.lastIndexOf(' ', 30);
+    let counter = 0;
+    const num = messageValue[1];
 
-    if (messageValue.length >= 34) {
-        const messageMax = messageValue.replace(messagePlace, '<br>');
-
-        if (messagePlace == -1 && messageValue.length > 32) {
-            const messageMax = messageValue.replace(messageValue.slice(30, 36), '<br>');
-            
-            return messageMax; 
+    for (let i = 0; i < messageValue.length; i++){    
+        if (num === messageValue[i]) {
+            counter++;
         };
 
-        /*for (let i = 0; messageValue.length > i; i++) {
-            const item = messageValue.map(item);
-            if (messageValue[i] == item ) {
-                alert('This message doesn`t make any sence...');
-            }
-        }*/
+        if (counter >= 26) {
+            alert('This message doesn`t make any sense');
+            return 'alert: The maximum number of identical letters is 25'
+        }
+    }
+
+    if (messageValue.length >= 30) {
+        const messageMax = messageValue.replace(messagePlace, '<br>');
+
+        if (messagePlace == -1 && messageValue.length > 35) {
+            const messageMax = messageValue.replace(messageValue.slice(33, 35), '<br>'); //Eng 34 - 33, 36;  Ru 29 - 27, 30;
+
+            return messageMax; 
+        };
 
         return messageMax;
     } else {
         return messageValue;
     }
-
-
 }
 
 

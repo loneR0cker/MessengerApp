@@ -127,13 +127,12 @@ h1, h2, h3, h4, h5, h6{
 }
 
 .vector{
-    font-size: 20px;
     width: 47px;
-    height: 50px;
+    height: 43px;
     
     position: absolute;
     right: 31px;
-    top: 37px;
+    top: 42px;
     background-color: #fff;
     border: 0;
     border-radius: 10px;
@@ -292,25 +291,6 @@ h1, h2, h3, h4, h5, h6{
     
     
     color: #969696;
-}
-
-
-
-/*logo*/
-.logo{
-    margin: 0 auto;
-    display: block;
-    width: 600px;
-    height: 400px;
-    background-image: url(./images/1.png);
-    background-size: cover;
-
-    position: absolute;
-    top: 217px;
-    right: -101px;
-
-    border-radius: 20px;
-    box-shadow: 0px 6px 25px rgb(19 35 68 / 10%);
 }
 
 .error{

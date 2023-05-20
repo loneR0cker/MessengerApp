@@ -4,6 +4,8 @@ const messageBox = document.querySelector('.message_box');
 const login = document.querySelector('.login_input');
 const message = document.querySelector('.rectangle_input');
 
+
+
 //DOM template of message + Add message function
 export function addMessage() {
     const loginValue = login.value;

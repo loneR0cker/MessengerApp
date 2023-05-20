@@ -104,11 +104,6 @@ module.exports = {
             }
         }),
         new CleanWebpackPlugin(),
-        /*new CopyWebpackPlugin({
-            patterns: [
-                { from: "assets/images/1.png", to: "dist"}
-            ],
-        }),*/
         new MiniCssExtractPlugin({
             filename: filename('css'),
         }),
